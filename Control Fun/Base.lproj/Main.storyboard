@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,38 +18,72 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kiT-5Y-Tpd">
                                 <rect key="frame" x="137" y="67" width="100" height="100"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-O0-X8V">
-                                <rect key="frame" x="262" y="203" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-O0-X8V">
+                                <rect key="frame" x="91" y="203" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieildDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="L0Y-50-OTC"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-JR-nVB">
-                                <rect key="frame" x="16" y="208" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-JR-nVB">
+                                <rect key="frame" x="16" y="208" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2e-Cc-gMq">
+                                <rect key="frame" x="16" y="254" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-km-zql">
+                                <rect key="frame" x="91" y="249" width="268" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieildDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="LVP-Iv-cJC"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="KUS-tW-Zhb"/>
-                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jRq-7Y-zTC"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="leading" secondItem="ytg-JR-nVB" secondAttribute="trailing" constant="8" symbolic="YES" id="1oY-1Y-0ET"/>
+                            <constraint firstItem="ytg-JR-nVB" firstAttribute="leading" secondItem="P2e-Cc-gMq" secondAttribute="leading" id="7xk-cR-g0q"/>
+                            <constraint firstItem="fOG-km-zql" firstAttribute="leading" secondItem="P2e-Cc-gMq" secondAttribute="trailing" constant="8" symbolic="YES" id="Af4-AG-rTD"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="leading" secondItem="fOG-km-zql" secondAttribute="leading" id="B0z-Tc-Vgq"/>
+                            <constraint firstItem="ytg-JR-nVB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cug-Z2-E5b"/>
+                            <constraint firstItem="ytg-JR-nVB" firstAttribute="centerY" secondItem="7Gm-O0-X8V" secondAttribute="centerY" id="EmR-T1-0eC"/>
+                            <constraint firstItem="P2e-Cc-gMq" firstAttribute="centerY" secondItem="fOG-km-zql" secondAttribute="centerY" id="MZ1-At-8QJ"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WGC-vO-aZd"/>
+                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anL-NQ-UL9"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="top" secondItem="kiT-5Y-Tpd" secondAttribute="bottom" constant="36" id="lY6-1R-khb"/>
+                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="qwh-CU-I14"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="trailing" secondItem="fOG-km-zql" secondAttribute="trailing" id="r2b-w2-LK2"/>
+                            <constraint firstItem="fOG-km-zql" firstAttribute="top" secondItem="7Gm-O0-X8V" secondAttribute="bottom" constant="16" id="yGz-ui-JCd"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTapWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="2qV-Nf-SeI"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="7Gm-O0-X8V" id="LuU-Hs-QU9"/>
+                        <outlet property="numberField" destination="fOG-km-zql" id="HDx-Vf-GAg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="148" y="138"/>
         </scene>
     </scenes>
     <resources>
