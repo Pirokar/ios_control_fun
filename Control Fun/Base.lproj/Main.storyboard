@@ -55,38 +55,104 @@
                                     <action selector="textFieildDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="LVP-Iv-cJC"/>
                                 </connections>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MFY-tB-7my">
+                                <rect key="frame" x="53" y="318" width="308" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lWw-LA-GYN"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2t-cC-FlW">
+                                <rect key="frame" x="16" y="323" width="31" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="9HK-OW-fxu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BGZ-PW-KDi">
+                                <rect key="frame" x="117" y="390" width="139" height="29"/>
+                                <segments>
+                                    <segment title="Switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="GmF-Fd-w9x"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2N-oJ-9jX">
+                                <rect key="frame" x="16" y="459" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jOT-lX-Fh9"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6A-mi-Wil">
+                                <rect key="frame" x="310" y="459" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gmu-2v-N5p"/>
+                                </connections>
+                            </switch>
+                            <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PT-b1-6Gq">
+                                <rect key="frame" x="19" y="459" width="340" height="38"/>
+                                <state key="normal" title="Do something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdu-9p-v2z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="leading" secondItem="ytg-JR-nVB" secondAttribute="trailing" constant="8" symbolic="YES" id="1oY-1Y-0ET"/>
-                            <constraint firstItem="ytg-JR-nVB" firstAttribute="leading" secondItem="P2e-Cc-gMq" secondAttribute="leading" id="7xk-cR-g0q"/>
-                            <constraint firstItem="fOG-km-zql" firstAttribute="leading" secondItem="P2e-Cc-gMq" secondAttribute="trailing" constant="8" symbolic="YES" id="Af4-AG-rTD"/>
-                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="leading" secondItem="fOG-km-zql" secondAttribute="leading" id="B0z-Tc-Vgq"/>
-                            <constraint firstItem="ytg-JR-nVB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cug-Z2-E5b"/>
-                            <constraint firstItem="ytg-JR-nVB" firstAttribute="centerY" secondItem="7Gm-O0-X8V" secondAttribute="centerY" id="EmR-T1-0eC"/>
-                            <constraint firstItem="P2e-Cc-gMq" firstAttribute="centerY" secondItem="fOG-km-zql" secondAttribute="centerY" id="MZ1-At-8QJ"/>
-                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WGC-vO-aZd"/>
-                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anL-NQ-UL9"/>
-                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="top" secondItem="kiT-5Y-Tpd" secondAttribute="bottom" constant="36" id="lY6-1R-khb"/>
-                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="qwh-CU-I14"/>
-                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="trailing" secondItem="fOG-km-zql" secondAttribute="trailing" id="r2b-w2-LK2"/>
-                            <constraint firstItem="fOG-km-zql" firstAttribute="top" secondItem="7Gm-O0-X8V" secondAttribute="bottom" constant="16" id="yGz-ui-JCd"/>
+                            <constraint firstItem="T6A-mi-Wil" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="439" id="0a0-tA-xgd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T6A-mi-Wil" secondAttribute="trailing" id="12Y-1C-G1U"/>
+                            <constraint firstItem="MFY-tB-7my" firstAttribute="top" secondItem="fOG-km-zql" secondAttribute="bottom" constant="39" id="4kH-0W-ZdC"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="trailing" secondItem="fOG-km-zql" secondAttribute="trailing" id="8Qc-jP-OG1"/>
+                            <constraint firstItem="m2N-oJ-9jX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="439" id="9oB-WA-XDB"/>
+                            <constraint firstItem="fOG-km-zql" firstAttribute="top" secondItem="7Gm-O0-X8V" secondAttribute="bottom" constant="16" id="AuI-e1-QCg"/>
+                            <constraint firstItem="kiT-5Y-Tpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BZD-0k-SAV"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="leading" secondItem="fOG-km-zql" secondAttribute="leading" id="Dku-8G-8cp"/>
+                            <constraint firstItem="ytg-JR-nVB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fyw-3t-f2z"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="m2N-oJ-9jX" secondAttribute="leading" id="GJ3-uM-85B"/>
+                            <constraint firstItem="fOG-km-zql" firstAttribute="leading" secondItem="P2e-Cc-gMq" secondAttribute="trailing" constant="8" symbolic="YES" id="GlS-mZ-2CR"/>
+                            <constraint firstItem="1PT-b1-6Gq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="LGO-li-bZg"/>
+                            <constraint firstItem="P2e-Cc-gMq" firstAttribute="leading" secondItem="e2t-cC-FlW" secondAttribute="leading" id="NjF-ix-vMa"/>
+                            <constraint firstItem="BGZ-PW-KDi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="370" id="PtI-4O-iGf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1PT-b1-6Gq" secondAttribute="trailing" id="Uad-B5-stW"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="leading" secondItem="ytg-JR-nVB" secondAttribute="trailing" constant="8" symbolic="YES" id="Waj-te-nuq"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bwf-Ag-iq2"/>
+                            <constraint firstItem="ytg-JR-nVB" firstAttribute="centerY" secondItem="7Gm-O0-X8V" secondAttribute="centerY" id="gKt-G8-A6z"/>
+                            <constraint firstItem="fOG-km-zql" firstAttribute="trailing" secondItem="MFY-tB-7my" secondAttribute="trailing" id="gLT-td-MY3"/>
+                            <constraint firstItem="1PT-b1-6Gq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="439" id="h7x-Ql-r9m"/>
+                            <constraint firstItem="7Gm-O0-X8V" firstAttribute="top" secondItem="kiT-5Y-Tpd" secondAttribute="bottom" constant="36" id="hQ4-Pj-Vmq"/>
+                            <constraint firstItem="MFY-tB-7my" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hWs-oQ-Uda"/>
+                            <constraint firstItem="MFY-tB-7my" firstAttribute="leading" secondItem="e2t-cC-FlW" secondAttribute="trailing" constant="8" symbolic="YES" id="iUB-Po-mgl"/>
+                            <constraint firstItem="BGZ-PW-KDi" firstAttribute="centerX" secondItem="kiT-5Y-Tpd" secondAttribute="centerX" id="kl2-B8-A5j"/>
+                            <constraint firstItem="ytg-JR-nVB" firstAttribute="leading" secondItem="P2e-Cc-gMq" secondAttribute="leading" id="mOB-8X-V5o"/>
+                            <constraint firstItem="e2t-cC-FlW" firstAttribute="centerY" secondItem="MFY-tB-7my" secondAttribute="centerY" id="pF1-tG-eYh"/>
+                            <constraint firstItem="P2e-Cc-gMq" firstAttribute="centerY" secondItem="fOG-km-zql" secondAttribute="centerY" id="v70-pW-URd"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTapWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="2qV-Nf-SeI"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingBtn" destination="1PT-b1-6Gq" id="l0T-Tu-Un0"/>
+                        <outlet property="leftSwitch" destination="m2N-oJ-9jX" id="VUo-re-bKG"/>
                         <outlet property="nameField" destination="7Gm-O0-X8V" id="LuU-Hs-QU9"/>
                         <outlet property="numberField" destination="fOG-km-zql" id="HDx-Vf-GAg"/>
+                        <outlet property="percentField" destination="e2t-cC-FlW" id="okR-Iy-DQ8"/>
+                        <outlet property="rightSwitch" destination="T6A-mi-Wil" id="QaF-h5-jZP"/>
+                        <outlet property="sliderView" destination="MFY-tB-7my" id="1Iu-3s-iTa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="138"/>
+            <point key="canvasLocation" x="148" y="137.18140929535232"/>
         </scene>
     </scenes>
     <resources>
+        <image name="blueButton" width="29" height="37"/>
         <image name="owl_logo" width="100" height="100"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
